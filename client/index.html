@@ -1,0 +1,67 @@
+<meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<html>
+
+<head>
+  <title>App</title>
+  <!--- MAP BOX -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div id="welcome">
+    <div id="welcomeBox">
+      <div id="welcomeBox_title">Welcome!</div>
+      <div id="welcomeBox_slogan">Gossip the life of those who are near!</div>
+      <div id="welcomeBox_pseudonymText">Your pseudonym: </div>
+      <div id="welcomeBox_pseudonym">Wait for it ... </div>
+      <button id="welcomeBox_button">Go!</button>
+      <div id="welcomeBox_errorText">Join in via smartphone! :) </div>
+    </div>
+  </div>
+  <div id="app">
+    <div id="online_users"> gossipers</div>
+    <div id="pseudonym_right"> Unknow</div>
+    <div id= "map"></div>
+    <div id="conversationBox">
+      <div id="conversationBox_upsideBar">
+        <button id="conversationBox_flecha"><i class="material-icons">arrow_back</i></button>
+        <div id="conversationBox_msg_title"></div>
+        <div id="conversationBox_msg_content"></div>
+        <div id="conversationBox_msg_author"></div>
+      </div>
+      <div id="conversationBox_sendBubble">
+        <input id = "conversationBox_sendBubble_textBox" placeholder="Nice reply here :3" ></input>
+        <button id = "conversationBox_sendBubble_sendButton" ><i class="material-icons">send</i></button>
+      </div>
+      <div id="conversationBox_msg"
+      </div>
+      <div id="conversationBox_replies">
+        <div id="templates" style="display: none"> 
+          <div class="conversationBox_replies_reply">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sendBubble">
+      <input id="sendBubble_textBox_title"  placeholder="A cute title" maxlength="26"></input>
+      <input id="sendBubble_textBox_content"  placeholder="An interesting message here"></input>
+      <button id = "sendBubble_sendButton"><i class="material-icons">send</i></button></button>
+    </div>
+    <button id="toggle_sendBubble"><i class="material-icons">mode_comment</i></button>
+  </div> <!-- convBox -->
+</div><!-- app -->
+</body>
+<script> mapboxgl.accessToken = 'pk.eyJ1Ijoicm9vb20iLCJhIjoiY2pkeXgzMTFsMTh6azM0czZlNXlyamU4ciJ9.9hkrat8V_m03FelrSIvxqw';</script>
+<script src="js/DATA.js"></script>
+<script src="js/COM.js"></script>
+<script src="js/MAP.js"></script>
+<script src="js/DEMO.js"></script>
+<script src="js/GUI.js"></script>
+<script src="js/APP.js"></script>
+<script> APP.init(); </script>
+
+</html>

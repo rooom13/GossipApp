@@ -1,0 +1,519 @@
+
+:root {
+    --main-bg-color: #1e1f1e;
+    --secondary-bg-color: #151615;
+    --details-main-color: #248a52;
+    --details-secondary-color: #1e1f1e;
+    --main-text-color: white;
+}
+
+body  {
+    margin: 0px;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+
+  }
+
+.material-icons {
+  color: white;
+  font-size: 36px;
+  }
+
+
+#welcome {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    z-index: 2;
+    visibility: visible;
+    align-items: center;
+}
+
+#welcomeBox {
+    background-color: var(--secondary-bg-color);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 10px;
+
+}
+#welcomeBox_title {
+
+    font-style: normal;
+font-weight: bold;
+color: var(--main-text-color);
+font-variant: small-caps;
+letter-spacing: 2pt;
+font-size: 35px;
+font-family: verdana, sans-serif;
+line-height: 1;
+padding: 10px 10px 10px 2px;
+}
+#welcomeBox_slogan {
+
+    font-style: italic;
+    letter-spacing: 1px;
+color: var(--details-main-color);
+font-size: 11px;
+font-family: verdana, sans-serif;
+line-height: 1;
+padding: 4px 10px 10px 2px;
+}
+
+#welcomeBox_pseudonymText {
+
+    font-style: normal;
+color: var(--main-text-color);
+font-size: 11px;
+font-family: verdana, sans-serif;
+line-height: 1;
+padding: 5px;
+}
+#welcomeBox_pseudonym {
+
+    font-weight: bold;
+    letter-spacing: 1px;
+color: var(--main-text-color);
+font-size: 22px;
+    font-variant: small-caps;
+font-family: verdana, sans-serif;
+line-height: 1;
+padding: 5px 5px 10px 5px;
+}
+
+#welcomeBox_errorText {
+  font-style: normal;
+  display: none;
+color: var(--main-text-color);
+font-size: 16px;
+
+font-family: verdana, sans-serif;
+line-height: 1;
+padding: 10px;
+}
+
+
+#welcomeBox_button {
+
+
+    color: #fff;
+    border: none;
+    background: var(--details-main-color);
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+#welcomeBox_button:active{
+    background-color: var(--details-secondary-color);
+}
+
+#app {
+    position:absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    z-index: 1;
+    visibility: hidden;
+}
+
+
+#pseudonym_right {
+    float: right;
+    position: relative;
+    background-color: var(--secondary-bg-color);
+    color: white;
+    border: none;
+    padding: 8px;
+    font-variant: small-caps;
+    font-weight: bold;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    font-family: verdana, sans-serif;
+
+
+}
+#online_users {
+    float: left;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+    padding: 8px;
+        font-variant: small-caps;
+    z-index: 1;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    margin-bottom:0px;
+
+    font-family: verdana, sans-serif;
+
+}
+
+.aDiv {
+    background-color: blue;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    z-index: 0;
+}
+
+
+
+.mapboxgl-popup-content {
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+    padding: 0px;
+    pointer-events: auto;
+    box-shadow: 2px 2px 5px #000000de;
+    border-radius: 2px;
+
+}
+
+.mapboxgl-popup-button {
+    background-color: #307aa8;
+    color: white;
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    -webkit-align-self: center;
+    align-self: center;
+    border-bottom: none;
+    border-top-color:  var(--main-bg-color);
+}
+h1 {
+    font-size: 14px;
+}
+
+
+#toggle_sendBubble{
+    position: absolute;
+
+    z-index: 1;
+    background-color: var(--details-main-color);
+    width: 65px;
+    height: 65px;
+    max-width: 80px;
+    max-height: 80px;
+    border: none;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    margin-left: 10px;
+
+}
+
+#toggle_sendBubble:active {
+    background-color: var(--details-secondary-color);
+
+
+}
+
+
+
+#sendBubble{
+    position: fixed;
+
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 90px;
+    margin-left: 10px;
+
+    padding: 20px;
+    height: 80px;
+    bottom: 0px;
+    background-color: var(--main-bg-color);
+    z-index: 1;
+    visibility: hidden;
+
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+
+
+#sendBubble_textBox_title{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border:none;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 3px;
+
+    border-bottom-style: solid;
+    border-color: var(--main-bg-color);
+    border-width: 1px;
+
+}
+
+#sendBubble_textBox_content{
+    position: relative;
+    width: 80%;
+    height: 40px;
+    float : left;
+    border: none;
+    border-right-style: solid;
+    border-color: var(--main-bg-color);
+    border-width: 1px;
+
+
+    border-bottom-left-radius: 5px;
+    padding: 3px;
+}
+#sendBubble_sendButton{
+    height: 40px;
+    width: 20%;
+    float:right;
+    background-color: var(--details-main-color);
+    border: none;
+    border-bottom-right-radius: 5px;
+
+}
+#sendBubble_sendButton:active{
+    background-color: var(--details-secondary-color);
+}
+
+#sendBubble_triangulito {
+    position: relative;
+    top: 0%;
+    width: 0px;
+    height: 0px;
+
+    border-left: 20px solid transparent;
+    border-left-width: 20px;
+    border-left-style: solid;
+    border-left-color: transparent;
+
+    border-right: 20px solid transparent;
+    border-right-width: 20px;
+    border-right-style: solid;
+    border-right-color: transparent;
+
+
+    border-top: 20px solid #f00;
+    border-top-width: 20px;
+    border-top-style: solid;
+    border-top-color: rgb(255, 0, 0);
+
+    visibility: hidden;
+}
+
+#conversationBox{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(30, 31, 30, 0.8196078431372549);
+
+    /*margin-top: 10px;*/
+
+  /*  margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 16px;*/
+    visibility: hidden;
+}
+
+#conversationBox_sendBubble{
+/*  border-radius: 5px 5px 16px 16px;*/
+  text-align: center;
+  background-color: var(--details-main-color);
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+  padding: 10px;
+
+
+}
+#conversationBox_sendBubble_sendButton{
+    background: none/*var(--details-main-color)*/;
+;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 20%;
+}
+
+#conversationBox_sendBubble_sendButton:active{
+    background-color: var(--details-secondary-color);
+}
+
+#conversationBox_sendBubble_textBox{
+  float: left;
+  width: 70%;
+  margin-left: 5px;
+      height: 40px;
+
+}
+
+
+#conversationBox_flecha{
+    float: left;
+    position: absolute;
+    background-color: #106739;
+    border: none;
+    width: 48px;
+    height: 48px;
+    z-index: 2;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    margin-bottom:0px;
+}
+#conversationBox_flecha:active{
+    background-color: var(--details-secondary-color);
+}
+
+#conversationBox_msg{
+    word-wrap: break-word;
+
+    float: center;
+    clear: both;
+
+
+
+}
+
+#conversationBox_upsideBar{
+  float:left;
+  background-color: var(--details-main-color);
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+#conversationBox_msg_author{
+    word-wrap: break-word;
+    padding: 5px;
+    text-align: left;
+    position: relative;
+    float: right;
+    clear: both;
+    max-width: 90vw;
+
+    font-style: normal;
+    font-weight: bold;
+    color: var(--main-text-color);
+    font-variant: small-caps;
+    letter-spacing: 1pt;
+    font-size: 14px;
+    background-color:  var(--main-bg-color);
+    border-top-left-radius: 5px;
+
+
+}
+
+#conversationBox_msg_title{
+    word-wrap: break-word;
+
+    padding: 10px;
+    text-align: center;
+    margin-left: 48px;
+    position: relative;
+
+    z-index: 0  ;
+
+    font-style: normal;
+    font-weight: bold;
+    color: var(--main-text-color);
+    font-variant: small-caps;
+    letter-spacing: 1pt;
+    font-size: 6vw;
+    font-family: verdana, sans-serif;
+
+
+}
+
+#conversationBox_msg_content{
+    word-wrap: break-word;
+    color: var(--main-bg-color);
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+    z-index: 0  ;
+    font-size: 20px;
+    font-style: italic;
+    font-family: verdana;
+
+}
+
+
+#conversationBox_replies{
+  height: auto;
+  position: relative;
+  overflow: auto;
+  overflow-x: hidden;
+      height: 70vh;
+
+
+}
+
+.conversationBox_replies_reply{
+    word-wrap: break-word;
+    border-radius: 5px;
+    padding: 6px 6px 6px 6px;
+    text-align: left;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    clear: both;
+    max-width: 90vw;
+
+}
+
+.conversationBox_replies_reply_author{
+  font-style: normal;
+  font-weight: bold;
+  color: var(--main-text-color);
+  font-variant: small-caps;
+  letter-spacing: 1pt;
+  font-size: 14px;
+  font-family: verdana, sans-serif;
+
+}
+
+/*Media query to check if using smartphone*/
+@media screen and (min-width: 500px) {
+      #welcomeBox_errorText {
+        display: block;
+    }
+}
+
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
