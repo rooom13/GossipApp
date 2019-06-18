@@ -8,11 +8,11 @@ var APP = {
   - startDemo: executes some tests for debugging
   */
   debug : {
-    emulate_connection : false,
+    emulate_connection : true,
     fastStart : false,
     fakeLocation : true,
     fakeCoordsCenter :{lng : 2.1938315, lat : 41.4041986 },
-    startDemo: false,
+    startDemo: true,
     msgCount : 100,
 
     // executes debug options
